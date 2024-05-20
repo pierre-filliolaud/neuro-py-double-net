@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.12"
 tensorflow = "^2.16.1"
 keras = "^3.3.3"
+numpy = "^1.26.4"
+sequential = "^1.0.0"
 
 
 [tool.poetry.group.dev.dependencies]

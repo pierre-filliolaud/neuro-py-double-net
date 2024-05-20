@@ -740,6 +740,16 @@ pygments = ">=2.13.0,<3.0.0"
 jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
+name = "sequential"
+version = "1.0.0"
+description = "Sequential wrappers for python functions."
+optional = false
+python-versions = "*"
+files = [
+    {file = "sequential-1.0.0.tar.gz", hash = "sha256:be93d69130c7e8e2ea6e5018d436062dd394b7562636bfdcea99d6aa96dd24e9"},
+]
+
+[[package]]
 name = "setuptools"
 version = "69.5.1"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
@@ -1009,4 +1019,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "3a525cf288b19ababbd2f72f3a6f31b4b7b80215dfce69674543853e87882a35"
+content-hash = "d2cebba2e9e5db9686f7822c9f16ac658bed5ea73e7484981297468a94cfbb80"
