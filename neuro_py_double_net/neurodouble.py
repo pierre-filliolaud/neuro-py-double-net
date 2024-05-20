@@ -3,6 +3,7 @@ from keras import layers
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
+import tensorflow as tf
 
 model = Sequential()
 
@@ -30,6 +31,25 @@ y = np.array(output_data)
 model.compile(loss='mean_squared_error', optimizer='adam')
 # model.fit(x=x,y=y,epochs=1000)
 model.fit(x=x,y=y,epochs=2500)
+
+# Save model
+model.save('neural_network_model.keras')
+
+# Load saved model
+loaded_model = tf.keras.models.load_model('neural_network_model.keras')
+
+# Re-create optimizerand compile loaded model
+new_optimizer = tf.keras.optimizers.Adam()
+loaded_model.compile(loss='mean_squared_error', optimizer=new_optimizer)
+
+# Continue training of loaded trained model
+additional_input_data = [6, 7, 8, 9, 10]
+additional_output_data = [12, 14, 16, 18, 20]
+x_additional = np.array(additional_input_data)
+y_additional = np.array(additional_output_data)
+
+loaded_model.fit(x=x_additional, y=y_additional, epochs=1000)
+
 
 # Prediction loop
 while True:
