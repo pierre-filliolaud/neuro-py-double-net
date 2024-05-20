@@ -11,6 +11,11 @@ model = Sequential()
 # Define model layers
 model.add(layers.Dense(units=3, input_shape=[1]))
 model.add(layers.Dense(units=64))
+model.add(layers.Dense(units=64))
+model.add(layers.Dense(units=64))
+model.add(layers.Dense(units=64))
+model.add(layers.Dense(units=64))
+model.add(layers.Dense(units=64))
 model.add(layers.Dense(units=1))
 
 #Input/Output
@@ -23,7 +28,8 @@ y = np.array(output_data)
 
 # Compile and train model
 model.compile(loss='mean_squared_error', optimizer='adam')
-model.fit(x=x,y=y,epochs=1000)
+# model.fit(x=x,y=y,epochs=1000)
+model.fit(x=x,y=y,epochs=2500)
 
 # Prediction loop
 while True:
